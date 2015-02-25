@@ -2,7 +2,7 @@
 
 <h1>Listing Apps</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Key</th>
@@ -18,9 +18,9 @@
         <td><%= app.key %></td>
         <td><%= app.identifier %></td>
         <td><%= app.environment %></td>
-        <td><%= link_to 'Show', app %></td>
-        <td><%= link_to 'Edit', edit_app_path(app) %></td>
-        <td><%= link_to 'Destroy', app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', app, class: "btn btn-default" %></td>
+        <td><%= link_to 'Edit', edit_app_path(app), class: "btn btn-default"%></td>
+        <td><%= link_to 'Destroy', app, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", :style => "color:#fff !important;" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New App', new_app_path %>
+<%= link_to 'New App', new_app_path, class: "btn btn-primary", :style => "color:#fff !important;" %>

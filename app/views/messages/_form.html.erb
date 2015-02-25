@@ -11,28 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :device_id %><br>
-    <%= f.text_field :receiver_id %>
+    <%= f.text_field :receiver_id, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :sound %><br>
-    <%= f.text_field :sound %>
+    <%= f.text_field :sound, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :badge %><br>
-    <%= f.number_field :badge %>
+    <%= f.number_field :badge, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :url %><br>
-    <%= f.text_field :url %>
+    <%= f.text_field :url, :class => "form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Create', :class => "btn btn-primary" %>
   </div>
 <% end %>

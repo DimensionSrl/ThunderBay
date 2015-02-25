@@ -11,39 +11,39 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :identifier %><br>
-    <%= f.text_field :identifier %>
+    <%= f.text_field :identifier, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :token %><br>
-    <%= f.text_field :token %>
+    <%= f.text_field :token, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :app_id %><br>
-    <%= f.number_field :app_id %>
+    <%= f.number_field :app_id, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :last_access %><br>
-    <%= f.datetime_select :last_access %>
+    <%= f.datetime_select :last_access, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :lat %><br>
-    <%= f.text_field :lat %>
+    <%= f.text_field :lat, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :lon %><br>
-    <%= f.text_field :lon %>
+    <%= f.text_field :lon, :class => "form-control"%>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :locale %><br>
-    <%= f.text_field :locale %>
+    <%= f.text_field :locale, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Create', :class => "btn btn-primary" %>
   </div>
 <% end %>

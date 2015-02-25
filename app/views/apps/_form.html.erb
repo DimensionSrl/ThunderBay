@@ -10,19 +10,19 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :sandbox %><br>
-    <%= f.check_box :sandbox %>
+    <%= f.check_box :sandbox, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :certificate %><br>
-    <%= f.file_field :certificate %>
+    <%= f.file_field :certificate, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :password %><br>
-    <%= f.text_field :password %>
+    <%= f.text_field :password, :class => "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Create', :class => "btn btn-primary" %>
   </div>
 <% end %>

@@ -2,7 +2,7 @@
 
 <h1>Listing Devices</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Identifier</th>
@@ -26,10 +26,10 @@
         <td><%= device.lon %></td>
         <td><%= device.locale %></td>
         <td><%= device.name %></td>
-        <td><%= link_to 'Send Message', new_message_path(:receiver_id => device.identifier) %></td>
-        <td><%= link_to 'Show', device %></td>
-        <td><%= link_to 'Edit', edit_device_path(device) %></td>
-        <td><%= link_to 'Destroy', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Send Message', new_message_path(:receiver_id => device.identifier), class: "btn btn-primary" , :style => "color:#fff !important;" %></td>
+        <td><%= link_to 'Show', device, class: "btn btn-default" %></td>
+        <td><%= link_to 'Edit', edit_device_path(device), class: "btn btn-default" %></td>
+        <td><%= link_to 'Destroy', device, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", :style => "color:#fff !important;" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -37,4 +37,4 @@
 
 <br>
 
-<%= link_to 'New Device', new_device_path %>
+<%= link_to 'New Device', new_device_path, class: "btn btn-primary", :style => "color:#fff !important;" %>
