@@ -30,5 +30,8 @@ class Message < ActiveRecord::Base
     end
 
     apn.push(notification)
+    
+    self.sent = 1
+    self.save
   end
 end
