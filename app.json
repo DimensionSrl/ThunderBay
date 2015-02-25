@@ -1,0 +1,7 @@
+{
+  "name": "Acapulco",
+  "scripts": {},
+  "env": {
+    "RAILS_ENV": "production"
+  }
+}

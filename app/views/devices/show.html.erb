@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Identifier:</strong>
+  <%= @device.identifier %>
+</p>
+
+<p>
+  <strong>Token:</strong>
+  <%= @device.token %>
+</p>
+
+<p>
+  <strong>App:</strong>
+  <%= @device.app_id %>
+</p>
+
+<p>
+  <strong>Last access:</strong>
+  <%= @device.last_access %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @device.lat %>
+</p>
+
+<p>
+  <strong>Lon:</strong>
+  <%= @device.lon %>
+</p>
+
+<p>
+  <strong>Locale:</strong>
+  <%= @device.locale %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @device.name %>
+</p>
+
+<%= link_to 'Edit', edit_device_path(@device) %> |
+<%= link_to 'Back', devices_path %>

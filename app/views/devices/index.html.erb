@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Devices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Identifier</th>
+      <th>App</th>
+      <th>Last access</th>
+      <th>Lat</th>
+      <th>Lon</th>
+      <th>Locale</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @devices.each do |device| %>
+      <tr>
+        <td><%= device.identifier %></td>
+        <td><%= device.app_id %></td>
+        <td><%= device.last_access %></td>
+        <td><%= device.lat %></td>
+        <td><%= device.lon %></td>
+        <td><%= device.locale %></td>
+        <td><%= device.name %></td>
+        <td><%= link_to 'Send Message', new_message_path(:receiver_id => device.identifier) %></td>
+        <td><%= link_to 'Show', device %></td>
+        <td><%= link_to 'Edit', edit_device_path(device) %></td>
+        <td><%= link_to 'Destroy', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Device', new_device_path %>
