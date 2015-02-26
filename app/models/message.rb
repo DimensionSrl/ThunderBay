@@ -6,7 +6,11 @@ class Message < ActiveRecord::Base
   after_create :sendPush
   
   def sendPush
-    apn = Houston::Client.development
+    if self.device.app.sandbox
+      apn = Houston::Client.development
+    else
+      apn = Houston::Client.production
+    end
     apn.certificate = self.device.app.certificate
     token = self.device.token
     notification = Houston::Notification.new(device: token)

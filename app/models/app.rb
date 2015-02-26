@@ -6,5 +6,10 @@ class App < ActiveRecord::Base
   end
   
   def sandbox
+    if self.environment == "production"
+      return false
+    else
+      return true
+    end
   end
 end
