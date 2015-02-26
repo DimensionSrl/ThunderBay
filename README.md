@@ -4,7 +4,16 @@ A Ruby on Rails application to manage devices and send iOS push notifications to
 
 ## Features
 
-- [x] 
+- [x] Create applications;
+- [x] Parse and convert p12 certificates;
+- [x] Accept device registrations;
+- [x] Send push notifications;
+- [x] Show device list;
+- [x] Show messages list;
+- [x] Accept received receipts;
+- [x] Accept red receipts;
+- [x] Show detailed informations for each message;
+- [x] Save device coordinates, name and locale.
 
 ## Requirements
 
