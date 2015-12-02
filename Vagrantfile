@@ -9,14 +9,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty64"
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
   
-  config.vm.provision "shell", path: "provisioner.sh"
+  # config.vm.provision "shell", path: "provisioner.sh"
   # config.vm.provision :shell, :path => "install-rvm.sh",  :args => "stable", :privileged => false
   # config.vm.provision :shell, :path => "install-ruby.sh", :args => "2.1.2", :privileged => false
   # config.vm.provision :shell, :path => "install-gems.sh", :privileged => false
   
-  config.vm.hostname = "contactlab.local"
-  config.vm.network :private_network, ip: "192.168.100.4"
-  config.vm.network "forwarded_port", guest: 3000, host: 3000
+  config.vm.hostname = "stringtomize.local"
+  config.vm.network :private_network, ip: "192.168.100.5"
+  config.vm.network "forwarded_port", guest: 3002, host: 3002
   
   # All Vagrant configuration is done here. The most common configuration
   # options are documented and commented below. For a complete reference,
