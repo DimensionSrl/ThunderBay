@@ -13,45 +13,48 @@
 
 ActiveRecord::Schema.define(version: 20150225172637) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "apps", force: :cascade do |t|
-    t.string   "key",         limit: 255
-    t.string   "identifier",  limit: 255
-    t.string   "environment", limit: 255
-    t.string   "password",    limit: 255
-    t.text     "certificate", limit: 65535
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "key"
+    t.string   "identifier"
+    t.string   "environment"
+    t.string   "password"
+    t.text     "certificate"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "devices", force: :cascade do |t|
-    t.string   "identifier",  limit: 255
-    t.string   "token",       limit: 255
-    t.string   "app_id",      limit: 255
+    t.string   "identifier"
+    t.string   "token"
+    t.string   "app_id"
     t.datetime "last_access"
-    t.float    "lat",         limit: 53
-    t.float    "lon",         limit: 53
-    t.string   "locale",      limit: 255
-    t.string   "name",        limit: 255
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.float    "lat"
+    t.float    "lon"
+    t.string   "locale"
+    t.string   "name"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "messages", force: :cascade do |t|
-    t.string   "receiver_id", limit: 255
-    t.integer  "sender_id",   limit: 4
-    t.string   "category",    limit: 255
-    t.string   "title",       limit: 255
-    t.string   "question",    limit: 255
-    t.string   "reply",       limit: 255
-    t.boolean  "deleted",     limit: 1
-    t.boolean  "sent",        limit: 1
-    t.boolean  "received",    limit: 1
-    t.boolean  "red",         limit: 1
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-    t.string   "url",         limit: 255
-    t.integer  "badge",       limit: 4
-    t.string   "sound",       limit: 255
+    t.string   "receiver_id"
+    t.integer  "sender_id"
+    t.string   "category"
+    t.string   "title"
+    t.string   "question"
+    t.string   "reply"
+    t.boolean  "deleted"
+    t.boolean  "sent"
+    t.boolean  "received"
+    t.boolean  "red"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "url"
+    t.integer  "badge"
+    t.string   "sound"
   end
 
 end

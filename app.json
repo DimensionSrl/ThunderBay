@@ -1,7 +1,17 @@
 {
-  "name": "Acapulco",
-  "scripts": {},
-  "env": {
-    "RAILS_ENV": "production"
-  }
+  "name": "ThunderBay",
+  "description": "ThunderBay server written in Ruby on Rails",
+  "repository": "https://github.com/macteo/thunderbay.git",
+  "keywords": ["rails", "thunderbay", "push", "proximity", "events", "log", "mobile"],
+  "addons": [
+    "heroku-postgresql",
+    "heroku-redis"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-ruby.git"
+    },{
+      "url": "https://github.com/gunpowderlabs/buildpack-ruby-db-migrate.git"
+    }
+  ]
 }

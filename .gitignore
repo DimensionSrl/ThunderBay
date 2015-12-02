@@ -34,3 +34,7 @@ bower.json
 .vagrant/machines/default/virtualbox/id
 .vagrant/machines/default/virtualbox/index_uuid
 .vagrant/machines/default/virtualbox/private_key
+uploads/it.dimension.fashion.development.p12
+uploads/it.dimension.fashion.development.pem
+uploads/it.dimension.fashion.production.p12
+uploads/it.dimension.fashion.production.pem

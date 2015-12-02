@@ -17,8 +17,8 @@ A Ruby on Rails application to manage devices and send iOS push notifications to
 
 ## Requirements
 
-- Ruby on Rails 4.2
-- Ruby 2.2
+- Ruby on Rails 4.2.5
+- Ruby 2.2.3
 
 ## Communication
 
@@ -26,13 +26,13 @@ A Ruby on Rails application to manage devices and send iOS push notifications to
 - If you **have a feature request**, open an issue.
 - If you **want to contribute**, submit a pull request.
 
-## Demo Instance
+## One click deploy on Heroku
 
-To speed up the process you can use the sample [ThunderBay]() push notification server and deploy it to your server.
-However we've setup a *demo instance* that will be purged frequently, to let you jump start. You can find it at [acapulco.dimension.it](http://acapulco.dimension.it).
+To simplify the testing process you can deploy on Heroku with one click.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/macteo/thunderbay.git)
 
 ## Usage
-
 
 ### Create App
 
@@ -59,14 +59,14 @@ You should perform a POST call with json parameters.
 
 #### Register device
 
-Each device needs to register itself and provide some informations. 
+Each device needs to register itself and provide some informations.
 
 ```
 http://THUNDERBAY_DOMAIN/apps/APPLICATION_IDENTIFIER/devices
 ```
 
 `APPLICATION_IDENTIFIER` is something like 8ef1bd2601579e98
-`THUNDERBAY_DOMAIN` is for the sample istance `acapulco.dimension.it`
+`THUNDERBAY_DOMAIN` is for the sample instance `acapulco.dimension.it`
 
 Here is a sample *curl* command
 ```
